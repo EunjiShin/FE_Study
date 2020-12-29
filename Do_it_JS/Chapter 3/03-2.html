@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var walkAmount = prompt("당신의 하루 걷는 양은 몇 보 인가요?");
+
+        // if(walkAmount >= 10000){
+        //     document.write("아주 좋아요! <br>");
+        // }else{
+        //     document.write("좀 더 운동하세요. <br>");
+        //}
+
+        // var userName = prompt("당신의 이름은?", "");
+        // if(userName){
+        //     document.write(userName+"님, 반갑습니다.<br>");
+        // }
+
+        // var result=confirm("정말로 회원을 탈퇴하시겠습니까?");
+
+        // if(result){
+        //     document.write("탈퇴 처리되었습니다.<br>");
+        // }else{
+        //     document.write("탈퇴 취소되었습니다.<br>");
+        // }
+
+        // var mon = prompt("현재는 몇 월 입니까?", "0");
+        // if(mon >= 9 && mon <=11){
+        //     document.write("독서하기 좋은 가을이에요~<br>");
+        // }else if(mon >= 6 && mon < 9){
+        //     document.write("놀러가기 좋은 여름이에요~<br>");
+        // }else if(mon >= 3 && mon < 6){
+        //     document.write("햇살 가득한 봄이네요~ <br>");
+        // }else{
+        //     document.wirte("눈 오는 겨울이에요~<br>");
+        // }
+
+
+        //document.write("======The End=======");
+
+        var id = "eunji";
+        var pw="1234";
+
+        var user_id=prompt("아이디는?", "");
+        var user_pw=prompt("비밀번호는?", "");
+
+        if(id==user_id){
+            if(pw==user_pw){
+                document.write(user_id+"님 환영합니다.");
+            }else{
+                alert("비밀번호가 틀렸습니다.");
+                location.reload();
+            }
+        }else{
+            alert("아이디가 틀렸습니다.");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 15;
+        var num2 = 3;
+        var result = num+num2;
+        document.write(result, "<br>");
+        document.write(num-num2, "<br>");
+        result = num*num2;
+        document.write(result, "<br>");
+
+        var t1="학교종이";
+        var t2="땡땡댕";
+        var t3=15;
+        var result2 = t1+t2+t3;
+
+        document.write(result2, "<br>");
+
+        num += num2;
+        document.write(num, "<br>");
+        num -= num2;
+        document.write(num, "<br>");
+
+        var str = "<table border='1'>";
+        str += "<tr>";
+        str += "<td>1</<td><td>2</td><td>3</td>";
+        str += "</tr>";
+        str += "</table>";
+        document.write(str);
+
+        num--;
+        document.write(num, "<br>");
+        num++;
+        document.write(num, "<br>");
+        var result2;
+        result = num++;
+        document.write(result, "<br>");
+        // result에 저장돤 후에 num증가하므로 15 출력
+        result = ++num;
+        document.write(result, "<br>");
+        // num 증가된 후 result에 저장되므로 앞에서 증가된 16에 +1 한 17 출력 
+
+        var a=10;
+        var b=20;
+        var c=10;
+        var d="20";
+        var test;
+
+        test = a>b;
+        document.write(test, "<br>");
+        test = a<=b;
+        document.write(test, "<br>");
+        test = a!=b;
+        document.write(test, "<br>");
+        test = b === d;
+        document.write(test, "<br>");
+
+        var s1 = 10;
+        var s2 = 20;
+        var s3 = 30;
+        var s4 = 40;
+        var eun;
+
+        eun = s1>s2 || s2>=s3 || s3 > s4;
+        document.write(eun, "<br>");
+        // false || false || false -> false
+        eun = s1>s2 && s2>=s3 || s3 < s4;
+        // false && false || false -> true
+        document.write(eun, "<br>");
+        eun = !eun;
+        // !true -> false
+        document.write(eun, "<br>");
+
+        eun = s1>s2 ? "javascript" : "hello";
+        document.write(eun, "<br>");
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
