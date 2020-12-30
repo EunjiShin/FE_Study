@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#list_1").parent().css("border", "2px dashed #f00");
+        });
+
+        $(function(){
+            $("#wrap h2").css({
+                "background-color":"yellow",
+                "border":"2px solid #f00"
+            });
+        });
+
+        $(function(){
+            $("#wrap2 > h1").css("border", "2px solid #f00");
+            $("#wrap2 > section").children().css({
+                "background-color":"green",
+                "border": "2px dashed #f00"
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list_1">리스트 1-1</li>
+                <li>리스트 1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+
+    <div id="wrap">
+        <h1>인접 관계 선택자2</h1>
+        <p>content</p>
+        <section>
+            <h2>하위 요소 선택자</h2>
+            <p>content2</p>
+        </section>
+    </div>
+
+    <div id="wrap2">
+        <h1>인접 관계 선택자3</h1>
+        <p>content</p>
+        <section>
+            <h2>자식 요소 선택자</h2>
+            <p>content2</p>
+        </section>
+    </div>
+
+</body>
+</html>

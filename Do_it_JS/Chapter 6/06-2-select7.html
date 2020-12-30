@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(function(){
+            var style_1 = {
+                "background-color" : "yellow",
+                "border":"2px solid #f00"
+            }
+            var style_2 = {
+                "background-color" : "#f00",
+                "border":"2px dashed #00f"
+            }
+
+            // 형/동생 요소 선택자
+            // $(".txt").prev().css(style_1);
+            // $(".txt + p").css(style_2);
+            // $(".txt").next().next().css(style_2);
+
+            // 전체 형/동생 요소 선택자
+            // $(".txt").prevAll().css(style_1);
+            // $(".txt").nextAll().css(style_2);
+
+            // 전체 형제요소 선택자
+            // $(".txt").siblings().css(style_1);
+
+            // 범위 제한 전체 형/동생 요소 선택자
+            $(".txt3").prevUntil(".title").css(style_1);
+            $(".txt3").nextUntil(".txt6").css(style_2);
+        });
+    </script>
+</head>
+<body>
+    <!-- <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>content1</p>
+        <p class="txt">content2</p>
+        <p>content3</p>
+        <p>content4</p>
+    </div> -->
+    <div id="wrap">
+        <h1 class="title">선택자</h1>
+        <p>content1</p>
+        <p>content2</p>
+        <p class="txt3">content3</p>
+        <p>content4</p>
+        <p>content5</p>
+        <p class="txt6">content6</p>
+    </div>
+</body>
+</html>
