@@ -1,0 +1,33 @@
+<!-- 탐색 선택자 : 기본 선택자로 선택한 요소 중 원하는 요소를 한 번 더 탐색해서 선택 정확도를 높인다. -->
+<!-- 기본 선택자로 선택한 요소들은 배열로 담긴다는 점을 기억하자. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#menu li:first").css({"background-color": "#ff0"});
+            $("#menu li:last").css({"background-color":"#0ff"});
+        });
+
+        $(function(){
+            $("#menu li:even").css({"border":"2px dashed #0ff"});
+            $("#menu li:odd").css({"border":"2px solid #ff0"});
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>content</li>
+        <li>content2</li>
+        <li>content3</li>
+        <li>content4</li>
+        <li>content5</li>
+    </ul>
+</body>
+</html>
