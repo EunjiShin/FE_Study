@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(function( ){
+            var w1 = $("#p1").height();
+            console.log(w1);
+
+            var w2 = $("#p1").innerHeight();
+            console.log(w2);
+
+            var w3 = $("#p1").outerHeight();
+            console.log(w3);
+
+            $("#p2")
+            .outerWidth(100)
+            .outerHeight(100);
+
+            var $txt1 = $(".txt_1 span"),
+			$txt2 = $(".txt_2 span"),
+			$box = $(".box");
+
+            var off_t = $box.offset().top; //100
+            var pos_t = $box.position().top; //50
+
+            $txt1.text(off_t);
+            $txt2.text(pos_t);   
+        });
+    </script>
+    <style>
+	*{margin:0; padding: 0;}
+	#p1, #p2{
+		width: 100px;
+		height: 50px;
+		padding:20px;
+		border: 5px solid #000;
+		background-color: #ff0;
+	}
+
+	#box_wrap{
+		width:300px;
+		height:200px;
+		margin:50px auto 0;
+		position: relative;
+		background-color:#ccc;
+	}
+
+	.box{
+		width:50px;height:50px;
+		position:absolute;
+		left:100px;top:50px;
+		background-color:#f00;
+	}
+    </style>
+</head>
+<body>
+	<h1>수치 조작 메서드</h1>
+	<p id="p1">내용1</p>
+    <p id="p2">내용2</p>
+    
+    <div id="box_wrap">
+		<p class="box">박스</p>
+	</div>
+	<p class="txt_1">절대 top위칫값: <span></span></p>
+	<p class="txt_2">상대 top위칫값: <span></span></p>
+</body>
+</html>
